@@ -22,8 +22,8 @@
   --site-id=2 \
   --site-domain={{ ECOMMERCE_HOST }} \
   --site-name=prod \
-  --partner-code=openedx \
-  --partner-name="Open edX" \
+  --partner-code=actplc \
+  --partner-name="Act Plc" \
   --lms-url-root="{% if ENABLE_HTTPS %}https{% else %}http{% endif %}://{{ LMS_HOST }}" \
   --lms-public-url-root="{% if ENABLE_HTTPS %}https{% else %}http{% endif %}://{{ LMS_HOST }}" \
   --client-side-payment-processor={{ ECOMMERCE_ENABLED_CLIENT_SIDE_PAYMENT_PROCESSORS|join(",") }} \
