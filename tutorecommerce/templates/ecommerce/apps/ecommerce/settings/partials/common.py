@@ -77,9 +77,9 @@ LOGGING["handlers"]["local"] = {
 }
 
 PAYMENT_PROCESSOR_CONFIG = {
-    "openedx": json.loads("""{{ ECOMMERCE_PAYMENT_PROCESSORS|tojson(indent=4) }}"""),
+    "actplc": json.loads("""{{ ECOMMERCE_PAYMENT_PROCESSORS|tojson(indent=4) }}"""),
 }
-PAYMENT_PROCESSOR_CONFIG["dev"] = PAYMENT_PROCESSOR_CONFIG["openedx"]
+PAYMENT_PROCESSOR_CONFIG["dev"] = PAYMENT_PROCESSOR_CONFIG["actplc"]
 PAYMENT_PROCESSORS = list(PAYMENT_PROCESSORS) + {{ ECOMMERCE_EXTRA_PAYMENT_PROCESSOR_CLASSES }}
 
 {% for payment_processor, urls_module in ECOMMERCE_EXTRA_PAYMENT_PROCESSOR_URLS.items() %}
